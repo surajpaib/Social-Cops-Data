@@ -1,5 +1,5 @@
 import pandas as pd
-PATH = '/home/suraj/Repositories/Social-Cops/DHIS (APRIL 15-MARCH 16)/BHIWAPUR BLOCK/SC/Jawali/Copy of MonthlyProgressReportMIES_SHIVAPUR SC_Apr-2015.xls'
+PATH = '/home/suraj/Repositories/Social-Cops/DHIS (APRIL 15-MARCH 16)/BHIWAPUR BLOCK/PHC/Copy of MonthlyProgressReportMIES_PHC Jawali_Apr-2015.xls'
 df = pd.read_excel(PATH, index= 0)
 del df["Unnamed: 0"]
 del df["Unnamed: 3"]
@@ -15,4 +15,4 @@ df = df.rename(index=str, columns={'Monthly Progress Report': 'Number',
 
                                    })
 print df.head(5)
-df.to_csv('SCs/shivapur.csv')
+df.to_csv('Cleaned Data/JawaliPHC.csv')
